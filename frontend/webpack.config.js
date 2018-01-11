@@ -24,7 +24,15 @@ module.exports = {
             },
             {
                 test: /\.html$/,
-                loader: "file-loader?name=[name].[ext]",
+                loader: 'file-loader?name=[name].[ext]',
+            },
+            {
+                test: /\.(png|woff|woff2|eot|ttf|svg)$/,
+                loader: 'url-loader?limit=100000',
+            },
+            {
+                test: /\.css$/,
+                loaders: ['style-loader', 'css-loader'],
             },
         ],
     },
@@ -33,6 +41,7 @@ module.exports = {
         port: 8889,
         proxy: {
             '/v1': 'http://127.0.0.1:8888',
-        }
+        },
+        historyApiFallback: true,
     },
 };

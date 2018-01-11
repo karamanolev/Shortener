@@ -1,7 +1,15 @@
 import React from 'react';
-import Greeting from './greeting.jsx';
+import ReactDOM from 'react-dom';
+import {BrowserRouter} from 'react-router-dom';
+import 'bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './main.css';
+import ShortenerRoot from './Root.jsx';
 
-React.render(
-    <Greeting name='World'/>,
-    document.body
+
+ReactDOM.render(
+    <BrowserRouter>
+        <ShortenerRoot/>
+    </BrowserRouter>,
+    document.getElementById('react-root'),
 );
