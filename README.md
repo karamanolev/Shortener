@@ -9,7 +9,7 @@ URL shortening service example (Django + React)
 Request:
 
     {
-        "url": "<target url"
+        "url": "<target url>"
     }
 
 Response:
@@ -22,7 +22,7 @@ Response:
 
 **Redirect to the full URL of the `qwerty` hash**
 
-`GET /v1/links/qwerty`
+`GET /v1/links/{hash}`
 
 **Fetches the details of a hash**
 
@@ -35,7 +35,7 @@ Response:
         "fullUrl": "http://...."
     }
 
-`PATCH /v1/links/qwerty`
+`PATCH /v1/links/{hash}`
 
 **Updates the hash with a new URL.**
 
@@ -45,7 +45,7 @@ Request:
         "url": "<target url>"
     }
 
-`DELETE /v1/links/qwerty`
+`DELETE /v1/links/{hash}`
 
 **Deletes a hash.**
 
