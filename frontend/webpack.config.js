@@ -40,7 +40,7 @@ module.exports = {
         contentBase: path.join(__dirname, 'dist'),
         port: 8889,
         proxy: {
-            '/v1': 'http://127.0.0.1:8888',
+            '/v1': 'http://backend:8888',
         },
         historyApiFallback: true,
     },
